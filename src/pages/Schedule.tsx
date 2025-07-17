@@ -10,7 +10,7 @@ const Schedule: React.FC = () => {
       try {
         const response = await fetch("/schedule-table.html");
         if (!response.ok) {
-          throw new Error("Failed to load schedule table");
+          throw new Error("Schedule currently unavailable");
         }
         const html = await response.text();
         setTableHtml(html);
@@ -40,9 +40,7 @@ const Schedule: React.FC = () => {
       <div id="schedule" className="flex justify-center">
         <div className="schedule-container flex flex-col items-center w-full max-w-full">
           <h1 className="text-center text-2xl font-bold mb-6">Availability</h1>
-          <div className="text-center text-red-600">
-            Error loading schedule: {error}
-          </div>
+          <div className="text-center text-red-600">{error}</div>
         </div>
       </div>
     );
@@ -53,9 +51,7 @@ const Schedule: React.FC = () => {
       <div className="schedule-container flex flex-col items-center w-full max-w-full">
         <h1 className="text-center text-2xl font-bold mb-6">Availability</h1>
         <div className="table-wrapper">
-          {/* SCHEDULE UPDATES: Edit /public/schedule-table.html */}
           <div dangerouslySetInnerHTML={{ __html: tableHtml }} />
-          {/* DO NOT EDIT BEYOND THIS POINT */}
         </div>
       </div>
     </div>
