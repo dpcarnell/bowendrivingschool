@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Lessons: React.FC = () => {
   return (
     <div className="flex justify-center">
@@ -9,12 +11,12 @@ const Lessons: React.FC = () => {
           <ol className="space-y-2 text-gray-700 ml-4">
             <li>
               1. View the lesson availability for available dates and times{" "}
-              <a
-                href="/schedule"
+              <Link
+                to="/schedule"
                 className="text-blue-600 hover:text-blue-800 underline"
               >
                 here
-              </a>
+              </Link>
             </li>
             <li>
               2. Text your name and preferred date & time to{" "}

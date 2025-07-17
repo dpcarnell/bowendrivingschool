@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/bowendrivingschool">
       <div
         className={`min-h-screen ${
           isMobile ? "mobile-background" : "desktop-background"
