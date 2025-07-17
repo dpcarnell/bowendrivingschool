@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logoImage from "/images/bds-logo.png";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -90,7 +91,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="flex items-center">
               <Link to="/" className="flex items-center space-x-2">
                 <img
-                  src="/images/bds-logo.png"
+                  src={logoImage}
                   alt="Bowen Driving School"
                   className="h-10 w-auto"
                 />

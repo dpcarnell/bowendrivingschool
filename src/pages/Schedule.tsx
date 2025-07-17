@@ -8,7 +8,7 @@ const Schedule: React.FC = () => {
   useEffect(() => {
     const loadTableHtml = async () => {
       try {
-        const response = await fetch("/schedule-table.html");
+        const response = await fetch("/bowendrivingschool/schedule-table.html");
         if (!response.ok) {
           throw new Error("Schedule currently unavailable");
         }
