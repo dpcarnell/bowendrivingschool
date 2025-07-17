@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import cancellationPolicyPdf from "/CancellationPolicy.pdf";
 
 const Lessons: React.FC = () => {
   return (
@@ -64,7 +65,7 @@ const Lessons: React.FC = () => {
             <div className="disclaimer-text text-gray-600">
               ** A copy of the{" "}
               <a
-                href="/CancellationPolicy.pdf"
+                href={cancellationPolicyPdf}
                 className="disclaimer-text text-blue-600 hover:text-blue-800 underline"
                 target="_blank"
                 rel="noopener noreferrer"
