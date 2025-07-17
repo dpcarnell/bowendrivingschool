@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .desktop-background {
+    background-image: url("/images/desktop-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .mobile-background {
+    background-image: url("/images/mobile-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .primary-content-spacer {
+    @apply bg-white m-4 w-full max-w-4xl p-8 rounded-2xl border-4 border-secondary shadow-lg;
+  }
+
+  .schedule-container {
+    @apply border-4 border-secondary bg-white p-6 rounded-2xl shadow-lg;
+  }
+
+  /* Table wrapper for sticky positioning */
+  .table-wrapper {
+    width: 100%;
+    max-height: 70vh;
+    overflow: auto;
+    position: relative;
+  }
+
+  /* Table styling without classes - targets all tables in schedule container */
+  .schedule-container table {
+    @apply w-full border-collapse;
+    font-family: arial, sans-serif;
+    min-width: 600px;
+  }
+
+  .schedule-container table td,
+  .schedule-container table th {
+    @apply border border-gray-300 text-center p-3;
+  }
+
+  .schedule-container table th {
+    @apply bg-gray-100 font-semibold;
+  }
+
+  .schedule-container table tr:nth-child(even) {
+    @apply bg-gray-50;
+  }
+
+  /* First column (month) styling */
+  .schedule-container table td:first-child {
+    @apply font-medium;
+  }
+
+  /* Sticky header row */
+  .schedule-container table thead tr {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .schedule-container table thead th {
+    @apply bg-gray-100;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  /* Sticky first row of tbody (time slots) */
+  .schedule-container table tbody tr:first-child {
+    position: sticky;
+    top: 49px; /* Height of header row + border */
+    z-index: 9;
+  }
+
+  .schedule-container table tbody tr:first-child td {
+    @apply bg-white;
+    position: sticky;
+    top: 49px;
+    z-index: 9;
+    border-top: 2px solid #d1d5db;
+  }
+
+  /* Sticky first column (month) for horizontal scrolling */
+  .schedule-container table th:first-child,
+  .schedule-container table td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 8;
+    @apply bg-gray-100;
+    border-right: 2px solid #d1d5db;
+  }
+
+  /* Sticky second column (date) for horizontal scrolling */
+  .schedule-container table th:nth-child(2),
+  .schedule-container table td:nth-child(2) {
+    position: sticky;
+    left: 80px; /* Width of first column + border */
+    z-index: 7;
+    @apply bg-gray-50;
+    border-right: 2px solid #d1d5db;
+  }
+
+  /* Higher z-index for intersection cells (top-left corners) */
+  .schedule-container table thead th:first-child {
+    z-index: 12;
+    @apply bg-gray-100;
+  }
+
+  .schedule-container table thead th:nth-child(2) {
+    z-index: 11;
+    @apply bg-gray-100;
+  }
+
+  .schedule-container table tbody tr:first-child td:first-child {
+    z-index: 11;
+    @apply bg-gray-100;
+  }
+
+  .schedule-container table tbody tr:first-child td:nth-child(2) {
+    z-index: 10;
+    @apply bg-gray-50;
+  }
+
+  /* Responsive text sizing for mobile */
+  @media (max-width: 640px) {
+    .schedule-container table td,
+    .schedule-container table th {
+      @apply text-xs;
+    }
+
+    /* Adjust sticky positioning for mobile */
+    .schedule-container table tbody tr:first-child {
+      top: 41px; /* Smaller height for mobile */
+    }
+
+    .schedule-container table tbody tr:first-child td {
+      top: 41px;
+    }
+
+    /* Adjust column widths for mobile */
+    .schedule-container table th:nth-child(2),
+    .schedule-container table td:nth-child(2) {
+      left: 60px; /* Smaller width for mobile */
+    }
+  }
+
+  @media (min-width: 641px) {
+    .schedule-container table td,
+    .schedule-container table th {
+      @apply text-sm;
+    }
+  }
+
+  .home-content {
+    @apply bg-white rounded-lg shadow-lg;
+  }
+
+  .home-message {
+    @apply bg-white rounded-lg shadow-lg mt-6;
+  }
+
+  .home-message2 {
+    @apply bg-white rounded-lg shadow-lg mt-6;
+  }
+
+  .message-content {
+    @apply text-center text-base;
+  }
+
+  .message-content2 {
+    @apply text-center text-base;
+  }
+
+  .message-sub-text {
+    @apply text-sm font-bold text-gray-600 text-center mt-4;
+  }
+
+  .message-sub-text2 {
+    @apply text-base text-center;
+  }
+
+  .main-header-message {
+    @apply text-center text-2xl font-bold;
+  }
+
+  .main-header-message2 {
+    @apply text-center text-xl font-bold;
+  }
+
+  .disclaimer-text {
+    @apply text-base;
+  }
+
+  .footer-text {
+    @apply text-center text-base;
+  }
+}
