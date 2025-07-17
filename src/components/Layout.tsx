@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logoImage from "/images/bds-logo.png";
+import { ROUTES } from "../config/constants";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -15,10 +16,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   };
 
   const navItems = [
-    { name: "Home", path: "/", icon: "🏠" },
-    { name: "About", path: "/about", icon: "ℹ️" },
-    { name: "Lesson Booking", path: "/lessons", icon: "📚" },
-    { name: "Lesson Availability", path: "/schedule", icon: "📅" },
+    { name: "Home", path: ROUTES.HOME, icon: "🏠" },
+    { name: "About", path: ROUTES.ABOUT, icon: "ℹ️" },
+    { name: "Lesson Booking", path: ROUTES.LESSONS, icon: "📚" },
+    { name: "Lesson Availability", path: ROUTES.SCHEDULE, icon: "📅" },
   ];
 
   return (
@@ -89,7 +90,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             {/* Logo */}
             <div className="flex items-center">
-              <Link to="/" className="flex items-center space-x-2">
+              <Link to={ROUTES.HOME} className="flex items-center space-x-2">
                 <img
                   src={logoImage}
                   alt="Bowen Driving School"
