@@ -1,6 +1,3 @@
-import { Link } from "react-router-dom";
-import cancellationPolicyPdf from "/CancellationPolicy.pdf";
-
 const Lessons: React.FC = () => {
   return (
     <div className="flex justify-center">
@@ -12,12 +9,12 @@ const Lessons: React.FC = () => {
           <ol className="space-y-2 text-gray-700 ml-4">
             <li>
               1. View the lesson availability for available dates and times{" "}
-              <Link
-                to="/schedule"
+              <a
+                href="/schedule"
                 className="text-blue-600 hover:text-blue-800 underline"
               >
                 here
-              </Link>
+              </a>
             </li>
             <li>
               2. Text your name and preferred date & time to{" "}
@@ -65,7 +62,7 @@ const Lessons: React.FC = () => {
             <div className="disclaimer-text text-gray-600">
               ** A copy of the{" "}
               <a
-                href={cancellationPolicyPdf}
+                href="/CancellationPolicy.pdf"
                 className="disclaimer-text text-blue-600 hover:text-blue-800 underline"
                 target="_blank"
                 rel="noopener noreferrer"
