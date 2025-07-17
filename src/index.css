@@ -15,14 +15,14 @@
 
 @layer components {
   .desktop-background {
-    background-image: url("../public/images/desktop-background.jpg");
+    background-image: url("/images/desktop-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 
   .mobile-background {
-    background-image: url("../public/images/mobile-background.jpg");
+    background-image: url("/images/mobile-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
