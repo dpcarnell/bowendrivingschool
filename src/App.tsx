@@ -1,14 +1,14 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Lessons from "./pages/Lessons";
 import Schedule from "./pages/Schedule";
-import { BASE_PATH, ROUTES } from "./config/constants";
+import { ROUTES } from "./config/constants";
 
 function App() {
   return (
-    <Router basename={BASE_PATH}>
+    <Router>
       <Layout>
         <Routes>
           <Route path={ROUTES.HOME} element={<Home />} />

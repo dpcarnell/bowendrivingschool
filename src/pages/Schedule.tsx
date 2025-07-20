@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { BASE_PATH } from "../config/constants";
 
 const Schedule: React.FC = () => {
   const [tableHtml, setTableHtml] = useState<string>("");
@@ -9,7 +8,7 @@ const Schedule: React.FC = () => {
   useEffect(() => {
     const loadTableHtml = async () => {
       try {
-        const response = await fetch(`${BASE_PATH}schedule-table.html`);
+        const response = await fetch("/schedule-table.html");
         if (!response.ok) {
           throw new Error("Schedule currently unavailable");
         }
