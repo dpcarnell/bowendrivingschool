@@ -16,6 +16,20 @@
     <meta name="author" content="Bowen Driving School" />
     <meta name="robots" content="index, follow" />
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bowendrivingschool.com.au/" />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="geo.region" content="AU-QLD" />
+    <meta name="geo.placename" content="Bowen" />
+    <meta name="geo.position" content="-20.0167;148.2500" />
+    <meta name="ICBM" content="-20.0167, 148.2500" />
+    <meta name="theme-color" content="#2563eb" />
+
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bowendrivingschool.com.au/" />
@@ -48,13 +62,14 @@
         "@context": "https://schema.org",
         "@type": "DrivingSchool",
         "name": "Bowen Driving School",
-        "description": "Professional driving lessons in Bowen, Queensland",
+        "description": "Professional driving lessons in Bowen, Queensland. Learn to drive with experienced instructors offering individual and package lessons.",
         "url": "https://bowendrivingschool.com.au/",
-        "telephone": "0487397625",
+        "telephone": "+61487397625",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Bowen",
           "addressRegion": "Queensland",
+          "postalCode": "4805",
           "addressCountry": "AU"
         },
         "geo": {
@@ -63,27 +78,29 @@
           "longitude": "148.2500"
         },
         "openingHours": "Mo-Fr 08:45-17:15",
-        "priceRange": "$80-$760",
+        "priceRange": "AUD 80-760",
+        "paymentAccepted": "Cash, Bank Transfer",
+        "currenciesAccepted": "AUD",
+        "serviceType": "Driving Lessons",
         "offers": [
           {
             "@type": "Offer",
-            "name": "Individual lesson",
+            "name": "Individual Driving Lesson",
+            "description": "Single one-hour driving lesson with professional instructor",
             "price": "80",
-            "priceCurrency": "AUD"
+            "priceCurrency": "AUD",
+            "availability": "https://schema.org/InStock"
           },
           {
             "@type": "Offer",
-            "name": "Three Lessons",
-            "price": "230",
-            "priceCurrency": "AUD"
-          },
-          {
-            "@type": "Offer",
-            "name": "Ten lessons",
+            "name": "Ten Lesson Package",
+            "description": "Comprehensive package of ten one-hour driving lessons",
             "price": "760",
-            "priceCurrency": "AUD"
+            "priceCurrency": "AUD",
+            "availability": "https://schema.org/InStock"
           }
-        ]
+        ],
+        "sameAs": ["https://bowendrivingschool.com.au/"]
       }
     </script>
   </head>
