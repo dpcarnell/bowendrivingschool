@@ -7,6 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Build
+public/index.html
+public/assets
+
 node_modules
 
 # Editor directories and files
