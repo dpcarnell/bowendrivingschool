@@ -50,8 +50,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Wait 15 seconds before deploy
-        run: sleep 15
+      - name: Wait 30 seconds before deploy
+        run: sleep 30
 
   deploy:
     environment:
