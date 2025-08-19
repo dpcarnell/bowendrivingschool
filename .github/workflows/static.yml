@@ -50,7 +50,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: delay
+    needs: build
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@v4
