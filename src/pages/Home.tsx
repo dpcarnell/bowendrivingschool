@@ -11,15 +11,16 @@ const Home: React.FC = () => {
       </div>
 
       {/* Commented out seasonal notices - can be uncommented as needed */}
-      {/* 
-      <div className="home-message flex flex-col items-center justify-center w-full max-w-2xl p-8 bg-white rounded-lg shadow-lg">
-        <div className="main-header-message text-2xl font-bold mb-4">Merry Christmas!</div>
-        <div className="message-content text-center text-lg">
-          Bowen Driving School is currently closed and will re-open on the 13th of
-          January 2025.
+
+      {/* <div className="home-message flex flex-col items-center justify-center w-full max-w-2xl p-8 bg-white rounded-lg shadow-lg lg:ml-8 lg:mt-8">
+        <div className="main-header-message text-2xl font-bold mb-4">
+          Merry Christmas!
         </div>
-      </div>
-      */}
+        <div className="message-content text-center text-lg">
+          Bowen Driving School is currently closed and will re-open on the 20th
+          of January 2026.
+        </div>
+      </div> */}
 
       {/* 
       <div className="home-message2 w-full max-w-2xl p-8 bg-white rounded-lg shadow-lg">
