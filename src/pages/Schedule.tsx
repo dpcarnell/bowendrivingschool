@@ -49,10 +49,10 @@ const Schedule: React.FC = () => {
   return (
     <div id="schedule" className="flex justify-center">
       <div className="schedule-container flex flex-col items-center w-full max-w-full">
-        <h1 className="text-center text-2xl font-bold mb-6">Availability</h1>
+        {/* <h1 className="text-center text-2xl font-bold mb-6">Availability</h1>
         <p className="text-center text-xl font-bold mb-6">
           2026 lessons availability will be posted in early January.
-        </p>
+        </p> */}
         <div className="table-wrapper">
           <div dangerouslySetInnerHTML={{ __html: tableHtml }} />
         </div>
