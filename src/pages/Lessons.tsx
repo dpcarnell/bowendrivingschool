@@ -37,10 +37,7 @@ const Lessons: React.FC = () => {
               <strong>Individual lesson:</strong> $80
             </li>
             <li>
-              <strong>Three Lessons:</strong> $230
-            </li>
-            <li>
-              <strong>Ten lessons:</strong> $760
+              <strong>Three Lessons:</strong> $235
             </li>
           </ul>
           <div className="space-y-3 mt-4 text-gray-700">
