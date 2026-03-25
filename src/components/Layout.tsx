@@ -28,7 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {isDrawerOpen && (
         <div className="fixed inset-0 z-50 lg:hidden">
           <div
-            className="fixed inset-0 bg-black bg-opacity-50"
+            className="fixed inset-0 bg-black/50"
             onClick={toggleDrawer}
           />
           <div className="fixed left-0 top-0 h-full w-64 bg-white shadow-lg">
