@@ -34,10 +34,10 @@ const Lessons: React.FC = () => {
           <h2 className="text-center text-2xl font-bold mb-6">Lesson Cost</h2>
           <ul className="space-y-2 text-gray-700 ml-4">
             <li>
-              <strong>Individual lesson:</strong> $80
+              <strong>Individual lesson:</strong> $90
             </li>
             <li>
-              <strong>Three Lessons:</strong> $235
+              <strong>Three Lessons:</strong> $260
             </li>
           </ul>
           <div className="space-y-3 mt-4 text-gray-700">
