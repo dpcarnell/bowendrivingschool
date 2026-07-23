@@ -1,4 +1,8 @@
 const Home: React.FC = () => {
+  // ADD MESSAGE TITLE HERE
+  const messageTitle = "";
+  // ADD MESSAGE CONTENT HERE
+  const messageContent = "";
   return (
     <div className="flex flex-col items-center justify-start min-h-[60vh] lg:items-start lg:justify-start">
       <div className="home-content w-full max-w-4xl lg:max-w-md p-12 lg:p-8 text-center lg:text-left lg:ml-8 lg:mt-8">
@@ -22,17 +26,19 @@ const Home: React.FC = () => {
         </div>
       </div> */}
 
-      {/* 
-      <div className="home-message2 w-full max-w-2xl p-8 bg-white rounded-lg shadow-lg">
-        <div className="main-header-message2 text-xl font-bold mb-4 text-center">Customer Notice</div>
-        <div className="message-content2 text-center mb-4 text-lg">
-          Bowen Driving School will be closed 7th to the 20th of August.
+      {messageTitle && messageContent && (
+        <div className="home-message2 w-full max-w-2xl p-8 bg-white rounded-lg shadow-lg">
+          <div className="main-header-message2 text-xl font-bold mb-4 text-center">
+            Customer Notice
+          </div>
+          <div className="message-content2 text-center mb-4 text-lg">
+            Bowen Driving School will be closed 7th to the 20th of August.
+          </div>
+          <div className="message-sub-text2 text-center text-base">
+            Call or text 0487397625 if you have any questions!
+          </div>
         </div>
-        <div className="message-sub-text2 text-center text-base">
-          Call or text 0487397625 if you have any questions!
-        </div>
-      </div>
-      */}
+      )}
     </div>
   );
 };
